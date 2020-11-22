@@ -432,14 +432,16 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     style_prefix "game_menu"
 
-    if main_menu:
-        add gui.main_menu_background
-    else:
-        add gui.game_menu_background
+    # if main_menu:
+    #     add gui.game_menu_background
+    #     #add gui.main_menu_background
+    # else:
+    add gui.game_menu_background
     
     frame:
         
         if main_menu:
+            
             style "game_menu_outer_frame"
         else:
             style "game_menu_outer_frame2"
@@ -532,7 +534,7 @@ style game_menu_navigation_frame:
 style game_menu_content_frame:
     left_margin 60
     right_margin 30
-    top_margin 15
+    top_margin 30
 
 style game_menu_viewport:
     xsize 1380
@@ -544,7 +546,7 @@ style game_menu_side:
     spacing 15
 
 style game_menu_label:
-    xpos 75
+    xpos 0.5
     ysize 180
 
 style game_menu_label_text:
@@ -1199,6 +1201,7 @@ style confirm_button is gui_medium_button
 style confirm_button_text is gui_medium_button_text
 
 style confirm_frame:
+    
     background Frame([ "gui/confirm_frame.png", "gui/frame.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
     padding gui.confirm_frame_borders.padding
     xalign .5
