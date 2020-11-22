@@ -380,8 +380,9 @@ screen main_menu():
     if gui.show_name:
 
         vbox:
-            text "[config.name!t]":
-                style "main_menu_title"
+            
+            # text "[config.name!t]":
+            #     style "main_menu_title"
 
             text "[config.version]":
                 style "main_menu_version"
@@ -437,7 +438,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
         add gui.game_menu_background
     
     frame:
-
+        
         if main_menu:
             style "game_menu_outer_frame"
         else:
